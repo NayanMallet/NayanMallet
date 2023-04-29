@@ -241,9 +241,6 @@
             }
 
             @media (prefers-reduced-motion) {
-            .container {
-            animation: none;
-            }
 
             .hi {
             animation: none;
@@ -255,6 +252,7 @@
 
         </style>
         <div class="background" xmlns="http://www.w3.org/1999/xhtml">
+            <h1>Hi there, my name is Nayan <div class="hi">👋</div></h1>
             <span></span>
             <span></span>
             <span></span>
@@ -276,8 +274,7 @@
             <span></span>
             <span></span>
         </div>
-        <div class="container">
-            <h1>Hi there, my name is Nayan <div class="hi">👋</div></h1>
+
         </div>
     </foreignObject>
 </svg>
