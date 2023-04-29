@@ -16,6 +16,7 @@
             background: #3E1E68;
             overflow: hidden;
             border-radius: 30px;
+            z-index: -1;
             }
 
             .background span {
