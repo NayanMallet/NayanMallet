@@ -20,7 +20,7 @@
    <span></span>
    <span></span>
 </div>
-<style>
+
 @keyframes move {
     100% {
         transform: translate3d(0, 0, 1px) rotate(360deg);
@@ -230,7 +230,7 @@ animation-delay: -46s;
 transform-origin: -23vw -4vh;
 box-shadow: -40vmin 0 5.674983353988306vmin currentColor;
 }
-</style>
+
 ### Hi there 👋
 
 <!--
