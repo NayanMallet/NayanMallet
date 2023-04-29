@@ -1,280 +1,52 @@
 <svg fill="none" viewBox="0 0 600 300" width="600" height="300" xmlns="http://www.w3.org/2000/svg">
     <foreignObject width="100%" height="100%">
         <style>
-            @keyframes move {
+            @keyframes rotate {
+            0% {
+            transform: rotate(0deg);
+            }
             100% {
-            transform: translate3d(0, 0, 1px) rotate(360deg);
+            transform: rotate(360deg);
             }
             }
 
-            .background {
-            position: fixed;
-            width: 100vw;
-            height: 100vh;
-            top: 0;
-            left: 0;
-            background: #3E1E68;
-            overflow: hidden;
-            border-radius: 30px;
-            z-index: -1;
+            .gradient {
+            --size: 250px;
+            --speed: 50s;
+            --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+
+            width: var(--size);
+            height: var(--size);
+            filter: blur(calc(var(--size) / 5));
+            background-image: linear-gradient(hsl(158, 82, 57, 85%), hsl(252, 82, 57));
+            animation: rotate var(--speed) var(--easing) alternate infinite;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
             }
 
-            .background span {
-            width: 20vmin;
-            height: 20vmin;
-            border-radius: 20vmin;
-            backface-visibility: hidden;
+            @media (min-width: 720px) {
+            .gradient {
+            --size: 500px;
+            }
+            }
+
+            body {
+            background-color: #222;
             position: absolute;
-            animation: move;
-            animation-duration: 45;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-            }
-
-
-            .background span:nth-child(0) {
-            color: #E45A84;
-            top: 65%;
-            left: 76%;
-            animation-duration: 44s;
-            animation-delay: -14s;
-            transform-origin: -8vw -2vh;
-            box-shadow: 40vmin 0 5.914867377385217vmin currentColor;
-            }
-            .background span:nth-child(1) {
-            color: #E45A84;
-            top: 80%;
-            left: 35%;
-            animation-duration: 33s;
-            animation-delay: -21s;
-            transform-origin: 3vw -6vh;
-            box-shadow: -40vmin 0 5.974077720579879vmin currentColor;
-            }
-            .background span:nth-child(2) {
-            color: #FFACAC;
-            top: 97%;
-            left: 76%;
-            animation-duration: 41s;
-            animation-delay: -48s;
-            transform-origin: -18vw 3vh;
-            box-shadow: 40vmin 0 5.24301535994533vmin currentColor;
-            }
-            .background span:nth-child(3) {
-            color: #FFACAC;
-            top: 66%;
-            left: 8%;
-            animation-duration: 13s;
-            animation-delay: -8s;
-            transform-origin: 7vw -19vh;
-            box-shadow: -40vmin 0 5.069458327153549vmin currentColor;
-            }
-            .background span:nth-child(4) {
-            color: #583C87;
-            top: 88%;
-            left: 10%;
-            animation-duration: 29s;
-            animation-delay: -36s;
-            transform-origin: -23vw -5vh;
-            box-shadow: -40vmin 0 5.916937893868271vmin currentColor;
-            }
-            .background span:nth-child(5) {
-            color: #E45A84;
-            top: 80%;
-            left: 17%;
-            animation-duration: 27s;
-            animation-delay: -18s;
-            transform-origin: -4vw -14vh;
-            box-shadow: 40vmin 0 5.955752452743613vmin currentColor;
-            }
-            .background span:nth-child(6) {
-            color: #E45A84;
-            top: 73%;
-            left: 72%;
-            animation-duration: 42s;
-            animation-delay: -24s;
-            transform-origin: -1vw 16vh;
-            box-shadow: -40vmin 0 5.500221477060065vmin currentColor;
-            }
-            .background span:nth-child(7) {
-            color: #E45A84;
-            top: 81%;
-            left: 48%;
-            animation-duration: 10s;
-            animation-delay: -14s;
-            transform-origin: -1vw 8vh;
-            box-shadow: -40vmin 0 5.953662294118731vmin currentColor;
-            }
-            .background span:nth-child(8) {
-            color: #E45A84;
-            top: 53%;
-            left: 39%;
-            animation-duration: 29s;
-            animation-delay: -23s;
-            transform-origin: 25vw 6vh;
-            box-shadow: 40vmin 0 5.578624599592935vmin currentColor;
-            }
-            .background span:nth-child(9) {
-            color: #FFACAC;
-            top: 62%;
-            left: 34%;
-            animation-duration: 51s;
-            animation-delay: -36s;
-            transform-origin: -12vw -18vh;
-            box-shadow: 40vmin 0 5.996587827140022vmin currentColor;
-            }
-            .background span:nth-child(10) {
-            color: #E45A84;
-            top: 87%;
-            left: 15%;
-            animation-duration: 40s;
-            animation-delay: -50s;
-            transform-origin: 11vw -4vh;
-            box-shadow: -40vmin 0 5.694744751144993vmin currentColor;
-            }
-            .background span:nth-child(11) {
-            color: #E45A84;
-            top: 94%;
-            left: 53%;
-            animation-duration: 30s;
-            animation-delay: -28s;
-            transform-origin: 19vw -23vh;
-            box-shadow: 40vmin 0 5.405225003088401vmin currentColor;
-            }
-            .background span:nth-child(12) {
-            color: #FFACAC;
-            top: 67%;
-            left: 42%;
-            animation-duration: 31s;
-            animation-delay: -16s;
-            transform-origin: 12vw 4vh;
-            box-shadow: -40vmin 0 5.61110683741277vmin currentColor;
-            }
-            .background span:nth-child(13) {
-            color: #583C87;
-            top: 35%;
-            left: 27%;
-            animation-duration: 13s;
-            animation-delay: -26s;
-            transform-origin: 0vw -7vh;
-            box-shadow: 40vmin 0 5.246822843480057vmin currentColor;
-            }
-            .background span:nth-child(14) {
-            color: #583C87;
-            top: 76%;
-            left: 22%;
-            animation-duration: 20s;
-            animation-delay: -23s;
-            transform-origin: 19vw -7vh;
-            box-shadow: 40vmin 0 5.322039465348199vmin currentColor;
-            }
-            .background span:nth-child(15) {
-            color: #E45A84;
-            top: 6%;
-            left: 15%;
-            animation-duration: 21s;
-            animation-delay: -7s;
-            transform-origin: -4vw -18vh;
-            box-shadow: 40vmin 0 5.60444019673029vmin currentColor;
-            }
-            .background span:nth-child(16) {
-            color: #583C87;
-            top: 41%;
-            left: 42%;
-            animation-duration: 50s;
-            animation-delay: -6s;
-            transform-origin: 5vw -15vh;
-            box-shadow: 40vmin 0 5.995772879598905vmin currentColor;
-            }
-            .background span:nth-child(17) {
-            color: #583C87;
-            top: 46%;
-            left: 25%;
-            animation-duration: 17s;
-            animation-delay: -32s;
-            transform-origin: -21vw -23vh;
-            box-shadow: 40vmin 0 5.252176803378193vmin currentColor;
-            }
-            .background span:nth-child(18) {
-            color: #E45A84;
-            top: 59%;
-            left: 82%;
-            animation-duration: 51s;
-            animation-delay: -7s;
-            transform-origin: 18vw 1vh;
-            box-shadow: 40vmin 0 5.115281616502994vmin currentColor;
-            }
-            .background span:nth-child(19) {
-            color: #583C87;
-            top: 19%;
-            left: 42%;
-            animation-duration: 11s;
-            animation-delay: -17s;
-            transform-origin: -9vw 6vh;
-            box-shadow: 40vmin 0 5.584130916344783vmin currentColor;
-
-            @keyframes hi  {
-            0% { transform: rotate( 0.0deg) }
-            10% { transform: rotate(14.0deg) }
-            20% { transform: rotate(-8.0deg) }
-            30% { transform: rotate(14.0deg) }
-            40% { transform: rotate(-4.0deg) }
-            50% { transform: rotate(10.0deg) }
-            60% { transform: rotate( 0.0deg) }
-            100% { transform: rotate( 0.0deg) }
-            }
-
-            width: 100%;
-            height: 300px;
-
+            inset: 0;
             display: flex;
-            justify-content: center;
+            place-content: center;
             align-items: center;
-            color: white;
-
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            overflow: hidden;
             }
 
-            .hi {
-            animation: hi 1.5s linear -0.5s infinite;
-            display: inline-block;
-            transform-origin: 70% 70%;
-            }
-
-            @media (prefers-reduced-motion) {
-
-            .hi {
-            animation: none;
-            }
-            }
-
-
+            /* This is just to transition when you change the viewport size. */
+            * {
+            transition: all 0.25s ease-out;
             }
 
         </style>
-        <div class="background" xmlns="http://www.w3.org/1999/xhtml">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <h1>Hi there, my name is Nayan <div class="hi">👋</div></h1>
-
+        <div class="gradient" xmlns="http://www.w3.org/1999/xhtml">
+            <h1>Hi there, my name is Nayan <div class="hi">👋</div></h1>
         </div>
     </foreignObject>
 </svg>
