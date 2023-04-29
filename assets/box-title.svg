@@ -252,7 +252,6 @@
 
         </style>
         <div class="background" xmlns="http://www.w3.org/1999/xhtml">
-            <h1>Hi there, my name is Nayan <div class="hi">👋</div></h1>
             <span></span>
             <span></span>
             <span></span>
@@ -274,6 +273,7 @@
             <span></span>
             <span></span>
         </div>
+        <h1>Hi there, my name is Nayan <div class="hi">👋</div></h1>
 
         </div>
     </foreignObject>
