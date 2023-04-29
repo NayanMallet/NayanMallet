@@ -1,36 +1,238 @@
 <svg fill="none" viewBox="0 0 600 300" width="600" height="300" xmlns="http://www.w3.org/2000/svg">
     <foreignObject width="100%" height="100%">
-        <div id="bg-wrap">
-            <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
-                <defs>
-                    <radialGradient id="Gradient1" cx="50%" cy="50%" fx="0.441602%" fy="50%" r=".5"><animate attributeName="fx" dur="34s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255, 0, 255, 1)"></stop><stop offset="100%" stop-color="rgba(255, 0, 255, 0)"></stop></radialGradient>
-                    <radialGradient id="Gradient2" cx="50%" cy="50%" fx="2.68147%" fy="50%" r=".5"><animate attributeName="fx" dur="23.5s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255, 255, 0, 1)"></stop><stop offset="100%" stop-color="rgba(255, 255, 0, 0)"></stop></radialGradient>
-                    <radialGradient id="Gradient3" cx="50%" cy="50%" fx="0.836536%" fy="50%" r=".5"><animate attributeName="fx" dur="21.5s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0, 255, 255, 1)"></stop><stop offset="100%" stop-color="rgba(0, 255, 255, 0)"></stop></radialGradient>
-                    <radialGradient id="Gradient4" cx="50%" cy="50%" fx="4.56417%" fy="50%" r=".5"><animate attributeName="fx" dur="23s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0, 255, 0, 1)"></stop><stop offset="100%" stop-color="rgba(0, 255, 0, 0)"></stop></radialGradient>
-                    <radialGradient id="Gradient5" cx="50%" cy="50%" fx="2.65405%" fy="50%" r=".5"><animate attributeName="fx" dur="24.5s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0,0,255, 1)"></stop><stop offset="100%" stop-color="rgba(0,0,255, 0)"></stop></radialGradient>
-                    <radialGradient id="Gradient6" cx="50%" cy="50%" fx="0.981338%" fy="50%" r=".5"><animate attributeName="fx" dur="25.5s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255,0,0, 1)"></stop><stop offset="100%" stop-color="rgba(255,0,0, 0)"></stop></radialGradient>
-                </defs>
-                <rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient4)">
-                <animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite" />
-                <animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite" />
-                <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="17s" repeatCount="indefinite"/>
-                </rect>
-                <rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient5)">
-                <animate attributeName="x" dur="23s" values="0%;-25%;0%" repeatCount="indefinite" />
-                <animate attributeName="y" dur="24s" values="25%;-25%;25%" repeatCount="indefinite" />
-                <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="18s" repeatCount="indefinite"/>
-                </rect>
-                <rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient6)">
-                <animate attributeName="x" dur="25s" values="-25%;0%;-25%" repeatCount="indefinite" />
-                <animate attributeName="y" dur="26s" values="0%;-25%;0%" repeatCount="indefinite" />
-                <animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="19s" repeatCount="indefinite"/>
-                </rect>
-                <rect x="13.744%" y="1.18473%" width="100%" height="100%" fill="url(#Gradient1)" transform="rotate(334.41 50 50)"><animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="7s" repeatCount="indefinite"></animateTransform></rect>
-                <rect x="-2.17916%" y="35.4267%" width="100%" height="100%" fill="url(#Gradient2)" transform="rotate(255.072 50 50)"><animate attributeName="x" dur="23s" values="-25%;0%;-25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="24s" values="0%;50%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="12s" repeatCount="indefinite"></animateTransform>
-                </rect>
-                <rect x="9.00483%" y="14.5733%" width="100%" height="100%" fill="url(#Gradient3)" transform="rotate(139.903 50 50)"><animate attributeName="x" dur="25s" values="0%;25%;0%" repeatCount="indefinite"></animate><animate attributeName="y" dur="12s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="9s" repeatCount="indefinite"></animateTransform>
-                </rect>
-            </svg>
+        <style>
+            @keyframes move {
+            100% {
+            transform: translate3d(0, 0, 1px) rotate(360deg);
+            }
+            }
+
+            .background {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            background: #3E1E68;
+            overflow: hidden;
+            }
+
+            .background span {
+            width: 20vmin;
+            height: 20vmin;
+            border-radius: 20vmin;
+            backface-visibility: hidden;
+            position: absolute;
+            animation: move;
+            animation-duration: 45;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            }
+
+
+            .background span:nth-child(0) {
+            color: #E45A84;
+            top: 65%;
+            left: 76%;
+            animation-duration: 44s;
+            animation-delay: -14s;
+            transform-origin: -8vw -2vh;
+            box-shadow: 40vmin 0 5.914867377385217vmin currentColor;
+            }
+            .background span:nth-child(1) {
+            color: #E45A84;
+            top: 80%;
+            left: 35%;
+            animation-duration: 33s;
+            animation-delay: -21s;
+            transform-origin: 3vw -6vh;
+            box-shadow: -40vmin 0 5.974077720579879vmin currentColor;
+            }
+            .background span:nth-child(2) {
+            color: #FFACAC;
+            top: 97%;
+            left: 76%;
+            animation-duration: 41s;
+            animation-delay: -48s;
+            transform-origin: -18vw 3vh;
+            box-shadow: 40vmin 0 5.24301535994533vmin currentColor;
+            }
+            .background span:nth-child(3) {
+            color: #FFACAC;
+            top: 66%;
+            left: 8%;
+            animation-duration: 13s;
+            animation-delay: -8s;
+            transform-origin: 7vw -19vh;
+            box-shadow: -40vmin 0 5.069458327153549vmin currentColor;
+            }
+            .background span:nth-child(4) {
+            color: #583C87;
+            top: 88%;
+            left: 10%;
+            animation-duration: 29s;
+            animation-delay: -36s;
+            transform-origin: -23vw -5vh;
+            box-shadow: -40vmin 0 5.916937893868271vmin currentColor;
+            }
+            .background span:nth-child(5) {
+            color: #E45A84;
+            top: 80%;
+            left: 17%;
+            animation-duration: 27s;
+            animation-delay: -18s;
+            transform-origin: -4vw -14vh;
+            box-shadow: 40vmin 0 5.955752452743613vmin currentColor;
+            }
+            .background span:nth-child(6) {
+            color: #E45A84;
+            top: 73%;
+            left: 72%;
+            animation-duration: 42s;
+            animation-delay: -24s;
+            transform-origin: -1vw 16vh;
+            box-shadow: -40vmin 0 5.500221477060065vmin currentColor;
+            }
+            .background span:nth-child(7) {
+            color: #E45A84;
+            top: 81%;
+            left: 48%;
+            animation-duration: 10s;
+            animation-delay: -14s;
+            transform-origin: -1vw 8vh;
+            box-shadow: -40vmin 0 5.953662294118731vmin currentColor;
+            }
+            .background span:nth-child(8) {
+            color: #E45A84;
+            top: 53%;
+            left: 39%;
+            animation-duration: 29s;
+            animation-delay: -23s;
+            transform-origin: 25vw 6vh;
+            box-shadow: 40vmin 0 5.578624599592935vmin currentColor;
+            }
+            .background span:nth-child(9) {
+            color: #FFACAC;
+            top: 62%;
+            left: 34%;
+            animation-duration: 51s;
+            animation-delay: -36s;
+            transform-origin: -12vw -18vh;
+            box-shadow: 40vmin 0 5.996587827140022vmin currentColor;
+            }
+            .background span:nth-child(10) {
+            color: #E45A84;
+            top: 87%;
+            left: 15%;
+            animation-duration: 40s;
+            animation-delay: -50s;
+            transform-origin: 11vw -4vh;
+            box-shadow: -40vmin 0 5.694744751144993vmin currentColor;
+            }
+            .background span:nth-child(11) {
+            color: #E45A84;
+            top: 94%;
+            left: 53%;
+            animation-duration: 30s;
+            animation-delay: -28s;
+            transform-origin: 19vw -23vh;
+            box-shadow: 40vmin 0 5.405225003088401vmin currentColor;
+            }
+            .background span:nth-child(12) {
+            color: #FFACAC;
+            top: 67%;
+            left: 42%;
+            animation-duration: 31s;
+            animation-delay: -16s;
+            transform-origin: 12vw 4vh;
+            box-shadow: -40vmin 0 5.61110683741277vmin currentColor;
+            }
+            .background span:nth-child(13) {
+            color: #583C87;
+            top: 35%;
+            left: 27%;
+            animation-duration: 13s;
+            animation-delay: -26s;
+            transform-origin: 0vw -7vh;
+            box-shadow: 40vmin 0 5.246822843480057vmin currentColor;
+            }
+            .background span:nth-child(14) {
+            color: #583C87;
+            top: 76%;
+            left: 22%;
+            animation-duration: 20s;
+            animation-delay: -23s;
+            transform-origin: 19vw -7vh;
+            box-shadow: 40vmin 0 5.322039465348199vmin currentColor;
+            }
+            .background span:nth-child(15) {
+            color: #E45A84;
+            top: 6%;
+            left: 15%;
+            animation-duration: 21s;
+            animation-delay: -7s;
+            transform-origin: -4vw -18vh;
+            box-shadow: 40vmin 0 5.60444019673029vmin currentColor;
+            }
+            .background span:nth-child(16) {
+            color: #583C87;
+            top: 41%;
+            left: 42%;
+            animation-duration: 50s;
+            animation-delay: -6s;
+            transform-origin: 5vw -15vh;
+            box-shadow: 40vmin 0 5.995772879598905vmin currentColor;
+            }
+            .background span:nth-child(17) {
+            color: #583C87;
+            top: 46%;
+            left: 25%;
+            animation-duration: 17s;
+            animation-delay: -32s;
+            transform-origin: -21vw -23vh;
+            box-shadow: 40vmin 0 5.252176803378193vmin currentColor;
+            }
+            .background span:nth-child(18) {
+            color: #E45A84;
+            top: 59%;
+            left: 82%;
+            animation-duration: 51s;
+            animation-delay: -7s;
+            transform-origin: 18vw 1vh;
+            box-shadow: 40vmin 0 5.115281616502994vmin currentColor;
+            }
+            .background span:nth-child(19) {
+            color: #583C87;
+            top: 19%;
+            left: 42%;
+            animation-duration: 11s;
+            animation-delay: -17s;
+            transform-origin: -9vw 6vh;
+            box-shadow: 40vmin 0 5.584130916344783vmin currentColor;
+            }
+
+        </style>
+        <div class="background" xmlns="http://www.w3.org/1999/xhtml">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </foreignObject>
 </svg>
