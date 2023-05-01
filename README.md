@@ -1,3 +1,3 @@
 <div id="header" align="center" >
-  <img src="assets/bg.svg" style="border-radius: 30px"/>
+  <img src="assets/box-title.svg" style="border-radius: 30px"/>
 </div>
