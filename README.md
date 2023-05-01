@@ -1,3 +1,3 @@
 <div id="header" align="center" >
-  <img src="assets/box-title.svg"/>
+  <img src="assets/bg.svg"/>
 </div>
