@@ -28,6 +28,6 @@
                 </rect>
                 <rect x="9.00483%" y="14.5733%" width="100%" height="100%" fill="url(#Gradient3)" transform="rotate(139.903 50 50)"><animate attributeName="x" dur="25s" values="0%;25%;0%" repeatCount="indefinite"></animate><animate attributeName="y" dur="12s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="9s" repeatCount="indefinite"></animateTransform>
                 </rect>
-                <text x="50%" y="50%" text-anchor="middle" style="z-index: 100"  font-size="10" fill="black" font-family="Arial, sans-serif">Nayan Mallet :)</text>
+                <text x="50%" y="50%" text-anchor="middle" style="z-index: 100"  font-size="10" fill="white" font-family="Arial, sans-serif">Nayan Mallet :)</text>
             </svg>
 </svg>
